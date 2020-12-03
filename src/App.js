@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import ButtonAppBar from './components/MenuButton';
+import FooterBar from './components/FooterBar';
+import Home from './components/Home';
+import GetManualData from './components/GetManualData';
+import GetJsonData from './components/GetJsonData';
+import './styling.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+export default class App extends Component {
 
-export default App;
+  state = {
+    page: "home"
+  };
+
+  setPage = (page) => {
+    this.setState({ page: page })
+  };
+
+  render() {
+    const { page } = this.state;
+    let pageName;
+    if (page === "home") {
+      pageName = <Home setPage={this.setPage} />
+    } else if (page === "manual") {
+      pageName = <GetManualData />
+    } else if (page === "json") {
+      pageName = <GetJsonData />
+    };
+
+    return (
+      <div className="app">
+        <ButtonAppBar toggleMenu={this.toggleMenu}
+          setPage={this.setPage}
+        />
+        <div className="app-container">
+          {pageName}
+        </div>
+        <FooterBar />
+      </div >
+    );
+  };
+};
