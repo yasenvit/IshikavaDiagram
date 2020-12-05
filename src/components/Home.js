@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
 import GetSample from './GetSample'
+import imgUrl from '../images/bg-pattern.jpg';
+
 
 export default class Home extends Component {
     render() {
@@ -27,10 +29,18 @@ export default class Home extends Component {
             </div>
         )
         return (
-            <div className="home">
+            <div
+                className="home"
+                style={{
+                    backgroundImage: `url(${imgUrl})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center center',
+                    backgroundRepeat: 'no-repeat',
+                }}>
+
                 <div className="text">
                     <div>
-                        <h4>FISHBONE DIAGRAM</h4>
+                        <h3>FISHBONE DIAGRAM</h3>
                     </div>
                     <div className="text-box">
                         Also called: cause-and-effect diagram, Ishikawa diagram.<br></br>
@@ -39,22 +49,18 @@ export default class Home extends Component {
                         It can be used to structure a brainstorming session.
                         It immediately sorts ideas into useful categories.
                     </div>
-                    <h5>WHEN TO USE A FISHBONE DIAGRAM</h5>
+                    <h4>WHEN TO USE A FISHBONE DIAGRAM</h4>
 
                     <ul>
                         <li>When identifying possible causes for a problem</li>
                         <li>When a team’s thinking tends to fall into ruts</li>
                     </ul>
-
+                    <h4>LETS GET STARTED</h4>
                 </div>
-                <h5>LETS GET STARTED</h5>
                 {buttons}
-
                 <div className="home-display">
                     <GetSample arrowButtonStyle={arrowButtonStyle} />
                 </div>
-
-
             </div>
         );
     };
@@ -67,18 +73,17 @@ var formButtonStyle = {
     minHeight: '40px',
     padding: '0px',
     margin: '2px',
-    fontFamily: "Computer Modern Bright",
-    fontSize: '12px',
+    // fontFamily: "Computer Modern Bright",
+    fontFamily: "Computer Modern TypeWriter",
+    fontSize: '16px',
     fontWeight: 700,
-    borderColor: '#3996CE',
     color: 'whitesmoke',
     backgroundColor: "#5b6692",
-    opacity: "0.8"
 };
 
 const arrowButtonStyle = {
     fontSize: "10px",
-    backgroundColor: "#AAC8B4",
-    color: "#5b6692",
-    border: "blue",
+    backgroundColor: '#5b6692',
+    color: 'whitesmoke',
+    border: "none"
 };

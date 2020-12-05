@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
 import BuildDiagram from './BuildDiagram';
 import JsonFormField from './JsonFormField';
-import JsonSample from './JsonSample';
+import imgUrl from '../images/bg-pattern.jpg';
+import PopUp from "./PopUp";
 
 export default class GetJsonData extends Component {
     state = {
@@ -137,7 +138,7 @@ export default class GetJsonData extends Component {
 
     render() {
         const { currentValue, goal, title, branches, errorMessage, warningMessage, isSampleOpened } = this.state;
-        let formField, displayDiagram, jsonSample;
+        let formField, displayDiagram;
         formField = (<
             JsonFormField
             currentValue={currentValue}
@@ -150,23 +151,28 @@ export default class GetJsonData extends Component {
                 arrowButtonStyle={arrowButtonStyle}
             />;
         };
-        if (isSampleOpened) {
-            jsonSample = <JsonSample />;
-        };
         return (
-            <div className="json">
+            <div
+                className="json"
+                style={{
+                    backgroundImage: `url(${imgUrl})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center center',
+                    backgroundRepeat: 'repeat',
+                }}>
+
                 <div className="json-form" onChange={this.handleChange()}>
-                    <div className="json-form-input">
-                        {formField}
-                    </div>
                     <div>
                         <Button variant="contained" style={jsonFormatButtonStyle} color="primary" onClick={() => { this.getFormatSample() }}>
                             {isSampleOpened ? 'hide JSON format' : 'see JSON format'}
                         </Button>
                     </div>
-                    {jsonSample}
+                    <div className="json-form-input">
+                        {formField}
+                    </div>
                 </div>
                 <div className="json-container">
+                    {this.state.isSampleOpened ? <PopUp getFormatSample={this.getFormatSample} /> : null}
                     <div className="json-error">
                         {errorMessage}
                         &nbsp;
@@ -180,16 +186,18 @@ export default class GetJsonData extends Component {
 };
 const arrowButtonStyle = {
     fontSize: "10px",
-    backgroundColor: "#C9E3F9",
+    backgroundColor: "#5b6692",
+    color: "whitesmoke",
     border: "none",
 };
 var jsonFormatButtonStyle = {
-    backgroundColor: "#637B9D",
+    backgroundColor: '#5b6692',
+    padding: 0,
     width: '100%',
-    height: '40px',
-    marginTop: "0.5em",
-    fontFamily: "Computer Modern Bright",
-    fontSize: '12px',
+    height: '35px',
+    marginBottom: "0.5em",
+    fontFamily: "Computer Modern TypeWriter",
+    fontSize: '15px',
     fontWeight: 750,
     color: "whitesmoke"
 };

@@ -17,11 +17,16 @@ html {
 * {
   box-sizing: border-box;
 }
-h4, h5 {
-  color:#5b6692
+h3,h4, h5, h6 {
+  color:#5b6692;
+  /* font-weight: 1100; */
+  font-size: 23px;
+  font-family: Computer Modern Typewriter;
+  font-weight: bolder;
+  margin: 2px;
 }
-h4, h5,p, ul {
-  margin:5px;
+p, ul {
+  margin: 0px;
   }
 .app {
   display: block;
@@ -49,14 +54,14 @@ h4, h5,p, ul {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 1em
+  padding: 1em;
+  font-family: Computer Modern Typewriter;
 }
 .home-display {
-  background-color: #96b19f;
-  width: 80%;
+  width: 70%;
   margin: 0.5em 0em 0.5em 0em;
-  padding: 1.5em
-}
+  padding: 1em;
+ }
 .home-buttons {
   display: flex;
   flex-direction: row;
@@ -64,7 +69,6 @@ h4, h5,p, ul {
   align-items: center;
 }
 .create {
-  background-color: #7C89BB;
   width: 100%;
   min-height: 95vh;
   display: flex;
@@ -82,7 +86,6 @@ h4, h5,p, ul {
   align-items: flex-start;
 }
 .create-form {
-  background-color: #BDCDEF;
   padding: 0.5em;
   flex: 1.2;
   display: flex;
@@ -98,7 +101,6 @@ h4, h5,p, ul {
   align-items: center;
 }
 .json {
-  background-color: #85A4D2;
   width: 100%;
   min-height: 95vh;
   display: flex;
@@ -107,15 +109,14 @@ h4, h5,p, ul {
   align-items: stretch;
 }
 .json-form {
-  background-color: #C9E3F9;
-  padding: 0.5em;
-  flex:1.2;
+   padding: 0.5em;
+   flex:1.2;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
  }
 .json-form-input {
-  background-color: whitesmoke;
+  background-color:#F6F6F6;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -130,6 +131,7 @@ h4, h5,p, ul {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  opacity: 0.9;
 }
 .json-container {
   padding: 1px;
@@ -202,10 +204,10 @@ h4, h5,p, ul {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  opacity: 0.65;
+  opacity: 0.8;
 }
 .json-sample-span {
-color: #006600;
+color: rgb(20, 20, 165);
 font-family:  Verdana, Geneva, Tahoma, sans-serif;
 font-weight: 550;
 font-size: small;
@@ -244,6 +246,7 @@ color: #484548
 .canvas {
  background-color: white;
  margin: 0px;
+ border: 0.5px solid #333333
  }
 .buttons-mui {
   height: 220px;
@@ -261,13 +264,14 @@ color: #484548
   align-items: center;
   justify-content: flex-end;
   text-align: start;
-  font-size: large;
+  font-size: 19px;
+  font-weight: 900;
   overflow-wrap: break-word;
   color: #333333;
 }
 .text-box {
-  padding: 5px
-}
+  padding: 5px;
+ }
 .menu {
   height: 5vh;
   display: flex;
@@ -276,7 +280,26 @@ color: #484548
   align-items: flex-start;
 }
 .footer-span {
+  font-family: Computer Modern Typewriter;
   text-decoration: none;
   color: rgb(245, 239, 239);
   font-weight: 500;
+}
+.modal {
+  position: fixed;
+  z-index: 1;
+  /* width: 100%;
+  height: 100%; */
+  /* background-color: rgba(0, 0, 0, 0.25); */
+}
+
+.modal_content {
+  background-color: #E2EEE1;
+  position: relative;
+  top: 1vh;
+  left: 0em;
+  padding:0.5em;
+  width: 350px;
+  border-radius: 5px;
+  border: 1px solid #52504f;
 }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import BuildDiagram from './BuildDiagram';
 import Button from '@material-ui/core/Button';
 import ManualFormField from './ManualFormField';
-import GetSample from './GetSample';
+import imgUrl from '../images/bg-pattern.jpg';
 
 export default class GetManualData extends Component {
     constructor(props) {
@@ -194,13 +194,20 @@ export default class GetManualData extends Component {
             completeElement={this.completeElement}
             isCreating={isCreating}
             addTitle={this.addTitle}
-            formButtonStyle={formButtonStyle}
             branchName={branchName}
             keyPress={this.keyPress}
         />);
 
         return (
-            <div className="create">
+            <div
+                className="create"
+                style={{
+                    backgroundImage: `url(${imgUrl})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center center',
+                    backgroundRepeat: 'no-repeat',
+                }}>
+
                 <div className="create-form">
                     <div className="create-form-objects" onChange={this.handleChange(inputFor)}>
                         {backButton}
@@ -224,16 +231,17 @@ var formButtonStyle = {
     minHeight: '40px',
     padding: '0px',
     margin: '0px',
-    fontFamily: "Computer Modern Bright",
-    fontSize: '12px',
+    fontFamily: "Computer Modern TypeWriter",
+    fontSize: '15px',
     fontWeight: 750,
     borderWidth: '1.6px',
-    backgroundColor: '#7C89BB',
+    backgroundColor: '#5b6692',
     color: "whitesmoke"
 };
 
 const arrowButtonStyle = {
     fontSize: "10px",
-    backgroundColor: "#BDCDEF",
-    border: "blue",
+    backgroundColor: '#5b6692',
+    color: 'whitesmoke',
+    border: "none"
 };

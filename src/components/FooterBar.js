@@ -1,7 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -26,9 +24,7 @@ export default function FooterBar(props) {
     const classes = useStyles();
     return (
         <div className={classes.root}>
-
             Created by <span className="footer-span">&nbsp;<a className="footer-span" href="https://www.linkedin.com/in/yasenvit/"> Vitaliy Yasenivskyy </a>&nbsp;</span> © 2020 New York
-
         </div>
     );
 }

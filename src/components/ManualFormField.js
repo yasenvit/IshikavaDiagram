@@ -10,7 +10,7 @@ export default class ManualFormField extends Component {
 
     render() {
         const { title, branches, currentValue, getInput, completeElement,
-            inputFor, isCreating, formButtonStyle, addTitle, branchName, keyPress } = this.props;
+            inputFor, isCreating, addTitle, branchName, keyPress } = this.props;
         let completeElementButton, inputField, submitButton, completeButton;
         let addToText = inputFor === "Enter Element" ? "add to" : "";
 
@@ -32,7 +32,7 @@ export default class ManualFormField extends Component {
                 <div className="site">
                     <Button
                         variant="text"
-                        style={formButtonStyle}
+                        style={formButtonStyle1}
                         color="primary"
                         onClick={(e) => { getInput(inputFor); this.textInput.current.focus(); }}>
                         <span className='span-text'>
@@ -96,6 +96,19 @@ var formInputStyle = {
     fontSize: '12px',
 };
 
+var formButtonStyle1 = {
+    maxWidth: '200px',
+    maxHeight: '150px',
+    minWidth: '200px',
+    minHeight: '40px',
+    padding: '0px',
+    margin: '0px',
+    fontFamily: "Computer Modern TypeWriter",
+    fontSize: '15px',
+    fontWeight: 750,
+    backgroundColor: '#5d6997',
+    color: "whitesmoke",
+};
 var formButtonStyle2 = {
     maxWidth: '200px',
     maxHeight: '150px',
@@ -103,11 +116,11 @@ var formButtonStyle2 = {
     minHeight: '40px',
     padding: '0px',
     margin: '0px',
-    fontSize: '12px',
-    fontWeight: 700,
-    backgroundColor: '#6976a8',
+    fontFamily: "Computer Modern TypeWriter",
+    fontSize: '15px',
+    fontWeight: 750,
+    backgroundColor: '#4f5980',
     color: "whitesmoke",
-    fontFamily: "Computer Modern Bright",
 };
 
 var formButtonStyle3 = {
@@ -117,9 +130,9 @@ var formButtonStyle3 = {
     minHeight: '40px',
     padding: '0px',
     margin: '0px',
-    fontSize: '12px',
-    fontWeight: 700,
-    backgroundColor: '#5b6692',
+    fontFamily: "Computer Modern TypeWriter",
+    fontSize: '15px',
+    fontWeight: 750,
+    backgroundColor: '#444C6D',
     color: "whitesmoke",
-    fontFamily: "Computer Modern Bright",
 };

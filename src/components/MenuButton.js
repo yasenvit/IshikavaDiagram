@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: "row",
         justifyContent: "flex-start",
         alignItems: "center",
-        paddingLeft: "1vw"
+        paddingLeft: "1vw",
     }
 }));
 

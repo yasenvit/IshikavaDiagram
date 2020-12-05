@@ -12,7 +12,9 @@ export default class JsonSample extends Component {
         let tab = <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>;
         return (
             <div className="json-sample" >
+                <h4 style={{ color: "#52504f" }}>JSON format</h4>
                 <div className="inner">
+
                     <p className="json-sample-p"><span className="json-sample-curly-brackets">{curlyBracketsOpen}</span></p>
                     <p className="json-sample-p">{tab}<span className="json-sample-punctuation-marks">{quotes}</span>goal<span className="json-sample-punctuation-marks">{quotes}</span>&nbsp;<span className="json-sample-punctuation-marks">{colon}</span>&nbsp;<span className="json-sample-punctuation-marks">{quotes}</span><span className="json-sample-span">your goal</span><span className="json-sample-punctuation-marks">{quotes}</span>&nbsp;<span className="json-sample-punctuation-marks">{comma}</span></p>
                     <p className="json-sample-p">{tab}<span className="json-sample-punctuation-marks">{quotes}</span>title<span className="json-sample-punctuation-marks">{quotes}</span>&nbsp;<span className="json-sample-punctuation-marks">{colon}</span>&nbsp;<span className="json-sample-punctuation-marks">{quotes}</span><span className="json-sample-span">your title</span><span className="json-sample-punctuation-marks">{quotes}</span>&nbsp;<span className="json-sample-punctuation-marks">{comma}</span></p>

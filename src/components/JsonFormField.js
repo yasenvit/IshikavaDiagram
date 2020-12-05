@@ -11,7 +11,7 @@ export default class JsonFormField extends Component {
                 label="Paste JSON"
                 value={currentValue}
                 multiline
-                rows={26}
+                rows={28}
                 variant='outlined'
                 autoFocus
                 fullWidth
@@ -26,7 +26,6 @@ export default class JsonFormField extends Component {
     };
 };
 var formInputStyle = {
-    fontFamily: "Computer Modern Bright",
     fontSize: '12px',
 };
 

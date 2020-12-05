@@ -6,9 +6,9 @@ import Typography from '@material-ui/core/Typography';
 const styles = theme => ({
     root: {
         width: 40 + theme.spacing(3) * 2,
-        color: 'whitesmoke',
+        color: '#333333',
         textAlign: "center",
-        fontFamily: "Computer Modern Bright",
+        fontFamily: "Computer Modern Typewriter",
     },
     margin: {
         height: theme.spacing(3),
@@ -79,7 +79,7 @@ class FontSlider extends Component {
                     max={15}
                     step={0.5}
                 />
-                <Typography gutterBottom>Font Size</Typography>
+                <Typography gutterBottom>Font size</Typography>
             </div>
         )
     }
