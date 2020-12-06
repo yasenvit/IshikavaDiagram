@@ -1,5 +1,6 @@
 {
   "name": "fishbone-diagram-canvas",
+  "homepage": "https://www.handleclick.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -10,7 +10,10 @@
   font-size:100%;
 }
 html {
-  background-color:#D6E3DA;
+  background: url(./images/bg-pattern.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   margin:0px;
   padding:0px;
 }
